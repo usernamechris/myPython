@@ -1,6 +1,22 @@
 #hello.py
 
-for i in range(2,10):
-    for j in range(1,10):
-        print(i*j, end="")
-    print('')
+class Service:
+    secret = "he has tow belly bottons"
+    bbbb
+    def setname(self, name):
+    def sum(self, a, b):
+        result = a + b
+        self.
+        print("%s님 %s + %s = %s입니다." % (self.aaaa, a, b, result))
+
+
+pey = Service()
+pey.setname("Kim")
+pey.sum(1,1)
+pay = Service()
+
+pay.bbb="sss"
+bay = Service()
+
+pay.bbb
+bay.bbb
