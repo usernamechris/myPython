@@ -17,7 +17,10 @@ class sky_scanner(unittest.TestCase):
 
         contry = "KR"
         currency = "USD"
+        '''
         locale = "en-US"
+        '''
+        locale = "ko-KR"
         query = "TYOA-sky"
         apiKey = "br275383206339467238375786905151"
 
