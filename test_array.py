@@ -15,17 +15,14 @@ class sky_scanner(unittest.TestCase):
         conn = httplib.HTTPConnection('partners.api.skyscanner.net')
         self.assertIsNotNone(conn)
 
-        contry = "KR"
-        currency = "USD"
-        #locale = "en-US"
+        country = "KR"
+        currency = "krw"
         locale = "ko-KR"
-        query = "TYOA-sky"
+        place_id = "SELA-sky"
         apiKey = "br275383206339467238375786905151"
 
-        request_query = "/apiservices/autosuggest/v1.0/%s/%s/%s?query=%s&apiKey=%s" % (contry, currency, locale, query, apiKey)
-        '''
-        request_query = "/apiservices/reference/v1.0/locales?apiKey=%s" % apiKey
-        '''
+        #request_query = "/apiservices/autosuggest/v1.0/%s/%s/%s?id=%s&apiKey=%s" % (country, currency, locale, place_id, apiKey)
+        request_query = "/apiservices/autosuggest/v1.0/%s/%s/%s?id=%s&apiKey=%s" % ('US', 'USD', 'ko-KR', place_id, apiKey)
         logging.debug(request_query)
 
         '''
@@ -42,7 +39,10 @@ class sky_scanner(unittest.TestCase):
         res = conn.getresponse()
         self.assertIsNotNone(res)
         logging.debug(res.status)
-        logging.debug(res.read())
+        contents = res.read()
+        logging.debug(contents)
+        dict = json.loads(contents)
+        logging.debug(dict['Places'][0]['PlaceName'])
         conn.close()
         '''
         contents = json.loads(res.read())
