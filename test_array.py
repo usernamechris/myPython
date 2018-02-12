@@ -17,12 +17,15 @@ class sky_scanner(unittest.TestCase):
 
         country = "KR"
         currency = "krw"
-        locale = "ko-KR"
+        #locale = "ko-KR"
+        locale = "en-US"
         place_id = "SELA-sky"
+        query= "서울"
         apiKey = "br275383206339467238375786905151"
 
         #request_query = "/apiservices/autosuggest/v1.0/%s/%s/%s?id=%s&apiKey=%s" % (country, currency, locale, place_id, apiKey)
-        request_query = "/apiservices/autosuggest/v1.0/%s/%s/%s?id=%s&apiKey=%s" % ('US', 'USD', 'ko-KR', place_id, apiKey)
+        #request_query = "/apiservices/autosuggest/v1.0/%s/%s/%s?id=%s&apiKey=%s" % ('US', 'USD', 'en-US', place_id, apiKey)
+        request_query = "/apiservices/autosuggest/v1.0/%s/%s/%s?query=%s&apiKey=%s" % (country, currency, locale, query, apiKey)
         logging.debug(request_query)
 
         '''
