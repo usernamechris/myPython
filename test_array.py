@@ -28,6 +28,7 @@ class sky_scanner(unittest.TestCase):
         request_query = "/apiservices/autosuggest/v1.0/%s/%s/%s?query=%s&apiKey=%s" % (country, currency, locale, query, apiKey)
         logging.debug(request_query)
 
+
         '''
         conn.request(
             "GET",
