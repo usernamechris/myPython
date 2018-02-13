@@ -1,0 +1,4 @@
+/flaskr.egg_info
+.vscode
+*.pyc
+__pycache__
